@@ -15,9 +15,10 @@ const customer = {
   },
   getOrders() {
     return this.orders;
+    
   },
   addOrder(cost, order) {
-    this.balance -=  cost - cost * this.discount;
+       this.balance  -= cost *  this.discount;
     return this.orders.push(order);
   },
   // Change code above this line
@@ -28,14 +29,6 @@ customer.getDiscount();//
 customer.addOrder(5000, "Steak");//
 customer.getBalance();//
 customer.getOrders();//
-
-
-
-
-
-
-
-
 
 
 

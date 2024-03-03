@@ -1,15 +1,19 @@
-const storage = ["Nanitoids", "Prolonger", "Antigravitator"];
-const storage = new Storage("Nanitoids", "Prolonger", "Antigravitator");
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+   
+   
+
+console.log(storage.getItems());   
     
+        
     
 
-const items = storage.getItems();
-console.table(items); 
+    
+        
 
-storage.addItem("Droid");
-console.table(storage.items); 
-storage.removeItem("Prolonger");
-console.table(storage.items); 
+
+
+    
+
 
 
 
