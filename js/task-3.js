@@ -1,44 +1,35 @@
-'use strict';
 class StringBuilder {
-  constructor(value) {
+  constructor({ value }) {
     this.value = value;
   }
-  get value() {
+  
+  getValue() {
     return this.value;
   }
 
-  append(str) {
-    this.value.push(str);
+  padStart(newValue) {
+    this.value = newValue + this.value;
   }
 
-  prepend(str) {
-    this.value.unshift(str);
+  padEnd(newValue) {
+    this.value = this.value + newValue;
   }
-  // додає елемент на поч і в кін
-  pad(str){
-    this.value.unshift(str);
+
+  padBoth(newValue) {
+    this.value = newValue + this.value + newValue;
   }
 }
 
-const builder = new StringBuilder('.');
+const builder = new StringBuilder({ value: "." });
 
-// const value = builder.value();
-// console.log(this.value);
+console.log(builder.getValue());
+builder.padStart("^");
+console.log(builder.getValue());
+builder.padEnd("^");
+console.log(builder.getValue());
+builder.padBoth("=");
+console.log(builder.getValue());
 
-builder.append('^');
-console.log(builder.value); // '.^'
-
-
-builder.prepend('^');
-console.log(builder.value); // '^.^
-
-
-
-
-
-
-
-?
 
 
 
