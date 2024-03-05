@@ -1,44 +1,44 @@
-
+'use strict';
 class StringBuilder {
-    constructor(value) {
-      this.value = value;
-    }
-
-    getval() {
-      return this.value;
-    }
-
-    setval(value) {
-      this.value = value;
-      return builder.value();
-    }
-
-    append(str) {
-      this.value += str;
-      return builder.padStart("^");
-    }
-
-    prepend(str) {
-      this.value = str + this.value;
-      return builder.padEnd("^");
-    }
-    // додає елемент на поч і в кін
-    pad(str) {
-      this.value = str + this.value + str;
-      return builder.padBoth("=");
-    }
+  constructor(value) {
+    this.value = value;
+  }
+  get value() {
+    return this.value;
   }
 
+  append(str) {
+    this.value.push(str);
+  }
 
-const builder = new StringBuilder(".");
-console.log(builder.value); // "."
-builder.padStart;
-console.log(builder.value); // "^."
-builder.padEnd;
-console.log(builder.value); // "^.^"
-builder.padBoth;
-console.log(builder.value); // "=^.^="
+  prepend(str) {
+    this.value.unshift(str);
+  }
+  // додає елемент на поч і в кін
+  pad(str){
+    this.value.unshift(str);
+  }
+}
 
+const builder = new StringBuilder('.');
+
+// const value = builder.value();
+// console.log(this.value);
+
+builder.append('^');
+console.log(builder.value); // '.^'
+
+
+builder.prepend('^');
+console.log(builder.value); // '^.^
+
+
+
+
+
+
+
+?
 
 
 
