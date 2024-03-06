@@ -19,8 +19,7 @@ const customer = {
   addOrder(cost, order) {
     this.balance  -= cost - cost * this.discount;
      this.orders.push(order);
-},    
-  
+},      
 };
 
 customer.setDiscount(0.15);//
