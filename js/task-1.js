@@ -3,7 +3,7 @@ const customer = {
   balance: 24000,
   discount: 0.1,
   orders: ["Burger", "Pizza", "Salad"],
-  // Change code below this line
+
   getBalance() {
     return this.balance;
   },
@@ -17,17 +17,17 @@ const customer = {
     return this.orders; 
   },
   addOrder(cost, order) {
-       this.balance  -= cost - cost * this.discount;
-    return this.orders.push(order);
-  },
-  // Change code above this line
+    this.balance  -= cost - cost * this.discount;
+     this.orders.push(order);
+},    
+  
 };
 
 customer.setDiscount(0.15);//
-customer.getDiscount();//
-customer.addOrder(5000, "Steak");//
-customer.getBalance();//
-customer.getOrders();//
+console.log(customer.getDiscount());
+customer.addOrder(5000, "Steak");
+console.log(customer.getBalance());//
+console.log(customer.getOrders());//
 
 
 

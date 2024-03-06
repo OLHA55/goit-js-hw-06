@@ -1,19 +1,23 @@
-const storage = ["Nanitoids", "Prolonger","Antigravitator"];
 class Storage {
-    constructor() {
+    constructor(items) {
         this.items = items;
     }
+
+    getItems() {
+        return this.items;
+    }
+
+    addItem(item) {
+        this.items.push(item);
+    }
+
+    removeItem(item) {
+        const index = this.items.indexOf(item);
+        if (index !== -1) {
+            this.items.splice(index, 1);
+        }
+    }
 }
-
-  
-getItems(item);
-       
-    
-
-addItem(item);
-      
-removeItem(item);
-       
 
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
 storage.addItem("Droid");
@@ -21,11 +25,9 @@ console.log(storage.getItems());
 storage.removeItem("Prolonger");
 console.log(storage.getItems());
 
-// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
-// storage.addItem("Droid");
-//  console.log(storage.getItems());    
-// storage.removeItem("Prolonger");
-// console.log(storage.getItems());
+
+
+
 
 
 
