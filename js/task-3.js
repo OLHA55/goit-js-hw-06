@@ -3,19 +3,15 @@ class StringBuilder {
   constructor({ value }) {
     this.#value = value;
   }
-  
   getValue() {
     return this.#value;
   }
-
   padStart(newValue) {
     this.#value = newValue + this.#value;
   }
-
   padEnd(newValue) {
     this.#value = this.#value + newValue;
   }
-
   padBoth(newValue) {
     this.#value = newValue + this.#value + newValue;
   }
