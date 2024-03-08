@@ -1,22 +1,23 @@
 class StringBuilder {
+  #value
   constructor({ value }) {
-    this.value = value;
+    this.#value = value;
   }
   
   getValue() {
-    return this.value;
+    return this.#value;
   }
 
   padStart(newValue) {
-    this.value = newValue + this.value;
+    this.#value = newValue + this.#value;
   }
 
   padEnd(newValue) {
-    this.value = this.value + newValue;
+    this.#value = this.#value + newValue;
   }
 
   padBoth(newValue) {
-    this.value = newValue + this.value + newValue;
+    this.#value = newValue + this.#value + newValue;
   }
 }
 
